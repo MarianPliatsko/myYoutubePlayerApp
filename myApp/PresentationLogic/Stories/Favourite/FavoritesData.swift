@@ -30,7 +30,5 @@ class FavoritesData {
         return favoriteData
     }
 }
-var videoHomeData: [Video] = []
-var filteredHomeData: [Video] = []
 
 

@@ -10,15 +10,13 @@ import UIKit
 class EditProfileViewController: UIViewController {
     
     private let profileVC = ProfileViewController()
-    
+    // REVIEW: make private
     @IBOutlet weak var editProfileImageView: UIImageView!
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var repeatPasswordTextField: UITextField!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

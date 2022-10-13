@@ -13,8 +13,10 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
     
     var data = Data()
     
-    // MARK: - Outlets
+    var videoHomeData: [Video] = []
     
+    // MARK: - Outlets
+    // REVIEW: make private
     @IBOutlet weak var homeTableView: UITableView!
     @IBOutlet weak var homeSearchBar: UISearchBar!
     
@@ -55,6 +57,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath) as? HomeTableViewCell else {
             return UITableViewCell()
         }
+        
         cell.itemDelegate = self
         return cell
     }
@@ -62,7 +65,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250.0
     }
-    
 }
 
 // MARK: - DataDelegate

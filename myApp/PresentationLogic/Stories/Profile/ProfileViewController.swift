@@ -9,7 +9,7 @@ import UIKit
 import GoogleSignIn
 
 class ProfileViewController: UIViewController {
-    
+    // REVIEW: make private
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
@@ -58,6 +58,9 @@ class ProfileViewController: UIViewController {
             guard let url = url else {
                 return
             }
+            
+            // REVIEW: replace with some SDK for example https://github.com/SDWebImage/SDWebImageFLPlugin
+            
             let session = URLSession.shared
             let dataTask = session.dataTask(with: url) { data, response, error in
                 if error == nil && data != nil {
