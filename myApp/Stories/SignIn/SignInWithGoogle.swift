@@ -14,8 +14,7 @@ let googleSignIn = GIDSignIn.sharedInstance
 extension SignInViewController {
     
     @IBAction func signInGoogleBtnAction(_ sender: Any) {
-//        googleLogin()
-        self.showTabBarController()
+        googleLogin()
     }
     
     func googleLogin() {

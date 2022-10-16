@@ -8,10 +8,10 @@
 import Foundation
 
 class Video: Decodable, Equatable {
+    
     static func == (lhs: Video, rhs: Video) -> Bool {
         return lhs.videoId == rhs.videoId
     }
-    
     
     var videoId: String
     var title: String

@@ -20,6 +20,7 @@ class APIService {
                           URLQueryItem(name: "part", value: "snippet"),
                           URLQueryItem(name: "maxResults", value: "5"),
                           URLQueryItem(name: "type", value: "video"),
+                          URLQueryItem(name: "order", value: "rating"),
                           URLQueryItem(name: "key", value: Constants.API_KEY)]
         
         var urlComponents = URLComponents(string: Constants.API_URL_SEARCH)

@@ -11,7 +11,7 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func signInWithGoogle() -> Bool {
         GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
             if error != nil || user == nil {
                 
@@ -20,6 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         return true
+    }
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let mainStoeyboard: UIStoryboard = UIStoryboard(name: "SignIn", bundle: nil)
+        let signInViewController: SignInViewController = mainStoeyboard.instantiateViewController(withIdentifier: "SignIn") as! SignInViewController
+        
+        return signInViewController.becomeFirstResponder()
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {

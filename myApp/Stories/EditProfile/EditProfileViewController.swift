@@ -22,6 +22,7 @@ class EditProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
     }
     
     @IBAction func cancelEditingButton(_ sender: Any) {

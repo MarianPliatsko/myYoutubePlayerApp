@@ -22,6 +22,7 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
         registerTableViewCell()
         homeSearchBar.delegate = self
         APIService.shared.delegate = self

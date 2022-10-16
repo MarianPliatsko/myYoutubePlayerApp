@@ -15,6 +15,7 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
         registerTableViewCell()
         favoritesTableView.delegate = self
         favoritesTableView.dataSource = self

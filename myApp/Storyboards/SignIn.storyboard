@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uLe-r8-dsM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign In View Controller-->
+        <scene sceneID="SLZ-lN-Sco">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YMQ-wb-Nqf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="SignIn" id="B3G-BI-2Bt" customClass="SignInViewController" customModule="myApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NFY-AY-Pzv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUa-dS-Y7N">
+                                <rect key="frame" x="104.5" y="432.5" width="205.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign in with Google Account"/>
+                                <connections>
+                                    <action selector="signInGoogleBtnAction:" destination="B3G-BI-2Bt" eventType="touchUpInside" id="NEb-mg-yio"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cU0-Se-cfk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hUa-dS-Y7N" firstAttribute="centerX" secondItem="NFY-AY-Pzv" secondAttribute="centerX" id="TNI-hD-W9I"/>
+                            <constraint firstItem="hUa-dS-Y7N" firstAttribute="centerY" secondItem="NFY-AY-Pzv" secondAttribute="centerY" id="hCW-Lh-7OA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hLO-E7-V0A"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2444.9275362318845" y="-58.258928571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Mql-xf-c8H">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uLe-r8-dsM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iMG-s1-8br">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="B3G-BI-2Bt" kind="relationship" relationship="rootViewController" id="0fm-sG-Bhm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pws-QR-wZZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1534.7826086956522" y="-58.258928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

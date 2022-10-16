@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tOD-JV-Q8a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -8,36 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sign In View Controller-->
-        <scene sceneID="oDO-rF-z5T">
-            <objects>
-                <viewController id="RRe-VV-yWP" customClass="SignInViewController" customModule="myApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="WuB-Je-8ge">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9a-p3-jYD">
-                                <rect key="frame" x="104.5" y="432.5" width="205.5" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Sign in with Google Account"/>
-                                <connections>
-                                    <action selector="signInGoogleBtnAction:" destination="RRe-VV-yWP" eventType="touchUpInside" id="YWK-3t-Hhf"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="cq2-gc-4HR"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="d9a-p3-jYD" firstAttribute="centerY" secondItem="WuB-Je-8ge" secondAttribute="centerY" id="Tsc-El-lgZ"/>
-                            <constraint firstItem="d9a-p3-jYD" firstAttribute="centerX" secondItem="WuB-Je-8ge" secondAttribute="centerX" id="lOA-Pi-Y5e"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="31b-U6-Hmf"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oRU-ZG-iFR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-284" y="-58"/>
-        </scene>
         <!--Play View Controller-->
         <scene sceneID="Sak-Za-5i6">
             <objects>
@@ -500,24 +470,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FD3-c7-2z8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-201.44927536231884" y="659.59821428571422"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Azb-rm-TQm">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tOD-JV-Q8a" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mx3-aG-Ww8">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="RRe-VV-yWP" kind="relationship" relationship="rootViewController" id="mt4-Iz-1Nk"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LQh-6b-apu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1320" y="-58"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hAQ-z7-Ell">
