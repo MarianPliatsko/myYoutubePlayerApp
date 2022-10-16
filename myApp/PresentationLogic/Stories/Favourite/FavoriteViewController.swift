@@ -11,6 +11,7 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
     
     var favoritesData: [Video] = []
     
+    // REVIEW: make private
     @IBOutlet weak var favoritesTableView: UITableView!
     
     override func viewDidLoad() {
@@ -39,6 +40,7 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteTableViewCell", for: indexPath) as? FavoriteTableViewCell else {
             return UITableViewCell()
         }
+        
         let favorite = favoritesData[indexPath.row]
         cell.configure(with: favorite)
         return cell
@@ -56,6 +58,7 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
         guard let playViewController = storyboard?.instantiateViewController(withIdentifier: "PlayViewController") as? PlayViewController else {
             return
         }
+        
         playViewController.video = favorite
         self.navigationController?.pushViewController(playViewController, animated: true)
     }

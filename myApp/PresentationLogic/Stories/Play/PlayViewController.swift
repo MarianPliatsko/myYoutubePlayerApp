@@ -38,7 +38,7 @@ class PlayViewController: UIViewController {
     @IBOutlet private var unlikeLabel: UILabel!
     @IBOutlet private var likeButton: UIButton!
     @IBOutlet private var unlikeButton: UIButton!
-    @IBOutlet var addToFavoriteButton: UIButton!
+    @IBOutlet var addToFavoriteButton: UIButton! // REVIEW: make private
     @IBOutlet weak var videoDescription: UITextView!
     
     

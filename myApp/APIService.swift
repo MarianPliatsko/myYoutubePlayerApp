@@ -15,6 +15,9 @@ class APIService {
     var videoDelegate: VideoDataDelegate?
     let user = GIDSignIn.sharedInstance.currentUser
     
+    var videoHomeData: [Video] = []
+    var filteredHomeData: [Video] = []
+    
     func getSearchVideos(query: String) {
         let queryItems = [URLQueryItem(name: "q", value: query),
                           URLQueryItem(name: "part", value: "snippet"),
@@ -30,10 +33,12 @@ class APIService {
         guard url != nil else {
             return
         }
+        
         let session = URLSession.shared
         if let url = url {
             let dataTask = session.dataTask(with: url) { data, response, error in
                 if error != nil || data == nil {
+                    // TODO: Handle error
                     return
                 }
                 do {
@@ -44,15 +49,17 @@ class APIService {
                         let response = try decoder.decode(Response.self, from: data)
                         if response.items != nil {
                             DispatchQueue.main.async {
-                                self.delegate?.videosFetched(response.items!)
+                                self.videoHomeData = response.items ?? []
+                                self.delegate?.videosFetched(response.items ?? [])
                             }
                         }
                     }
                 }
                 catch {
-                    
+                    // TODO: Handle error
                 }
             }
+            
             dataTask.resume()
         }
     }

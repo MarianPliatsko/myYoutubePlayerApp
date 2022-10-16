@@ -1,17 +1,26 @@
 //
-//  SignInWithGoogle.swift
+//  SignInViewController.swift
 //  myApp
 //
-//  Created by mac on 2022-09-22.
+//  Created by mac on 2022-09-25.
 //
 
-import Foundation
+import UIKit
 import GoogleSignIn
 
-let signInConfig = GIDConfiguration(clientID: "680530358242-sg28ou00lu23hav5phqmi0aausuiubll.apps.googleusercontent.com")
-let googleSignIn = GIDSignIn.sharedInstance
-
-extension SignInViewController {
+class SignInViewController: UIViewController {
+    
+    private let signInConfig = GIDConfiguration(clientID: "680530358242-sg28ou00lu23hav5phqmi0aausuiubll.apps.googleusercontent.com")
+    private let googleSignIn = GIDSignIn.sharedInstance
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    func showTabBarController() {
+        let main = TabBarController()
+        self.show(main, sender: self)
+    }
     
     @IBAction func signInGoogleBtnAction(_ sender: Any) {
         googleLogin()

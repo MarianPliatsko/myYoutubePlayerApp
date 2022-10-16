@@ -12,6 +12,10 @@ class HomeTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
     let homeVC = HomeViewController()
     var itemDelegate: CustomVideoItemDelegate?
     
+    var videoHomeData: [Video] {
+        APIService.shared.videoHomeData
+    }
+
     @IBOutlet var homeCollectionView: UICollectionView!
     
     override func awakeFromNib() {
